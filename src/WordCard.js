@@ -26,10 +26,10 @@ export default function WordCard(props){
 
         if(guess.length == state.word.length){
             if(guess == state.word){
-                console.log('yeah!')
+                window.alert('You win \nyeah!')
                 setState({...state, guess: '', completed: true})
             }else{
-                console.log('reset')
+                window.alert('You lose \nreset')
                 setState({...state, guess: '', attempt: state.attempt + 1})
             }
         }
