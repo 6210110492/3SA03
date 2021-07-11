@@ -1,5 +1,5 @@
 import React, { useState} from 'react';
-import _ from 'lodash';
+import _ from 'lodas';
 
 import CharacterCard from './CharacterCard';
 
