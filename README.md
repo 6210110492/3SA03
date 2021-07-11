@@ -1,70 +1,38 @@
-# Getting Started with Create React App
+3SA03 React
+นาย ธนวัฒน์ โสภาพ 6210110492 section 01
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### 7. งำนหลังกำรทดลอง
 
-## Available Scripts
+## 1.เพิ่มคำศัพท์
 
-In the project directory, you can run:
+ใช้คำสั่ง   const Fruit = ["Apple","Banana","Coconut","Durian"];
+         const Animal = ["Ant","Brid","Cat","Dog"];
+         const Vegetable = ["Acacia","Basil","Chilli","Dill"];
+และแบ่งหมวดหมู่ไว้
 
-### `yarn start`
+## 2.สุ่มคำศัพท์
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+ใช้คำสั่ง   const randomFruit = Fruit[Math.floor(Math.random()*Fruit.length)];
+         const randomAnimal = Animal[Math.floor(Math.random()*Animal.length)];
+         const randomVegetable = Vegetable[Math.floor(Math.random()*Vegetable.length)];
+เพื่อสุ่มคำศัพท์แต่ละหมวดหมู่
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 3.สร้างหัวข้อที่จะแสดงผลแต่ละหมวดหมู่
 
-### `yarn test`
+ใช้คำสั่ง  <header>
+          <h1> React Game </h1>
+        </header>
+        <h2> Fruit </h2>
+        <WordCard value={randomFruit}/>
+        <h2> Animal </h2>
+        <WordCard value={randomAnimal}/>
+        <h2> Vegetable </h2>
+        <WordCard value={randomVegetable}/>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 4.สร้างปุ่ม Restart
 
-### `yarn build`
+ใช้คำสั่ง <button onClick={newgame}>Restart</button>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 5.เปลี่ยน output  ใน WordCard.js
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+แก้คำสั่งในบรรทัดที่ 29 และ 32 จาก console.log() เป็น window.alert()
