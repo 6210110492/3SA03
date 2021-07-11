@@ -3,15 +3,13 @@ import './App.css';
 
 import WordCard from './WordCard';
 
-const word = "Fruit"
+const word = ["Fruit","Apple","Banana","Coconut","Durian"]
+const randomWord = word[Math.floor(Math.random()*word.length)];
 function App() {
   return (
       <div>
-        <WordCard value={word}/>
-        <WordCard value={"Apple"}/>
-        <WordCard value={"Banana"}/>
-        <WordCard value={"Coconut"}/>
-        <WordCard value={"Durian"}/>
+        <WordCard value={randomWord}/>
+
       </div>
     );
      
